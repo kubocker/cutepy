@@ -2,9 +2,17 @@
 # -*- coding: utf-8 -*-
 
 from PyQt5.QtWidgets import QMainWindow
+from .settings import UI_BASE as ui
 
 
 class MainMenu(QMainWindow):
+
+    width = ui['width']
+    height = ui['height']
+    pos_x = ui['x']
+    pos_y = ui['y']
+
+
     def __init__(self):
         super().__init__()
         self.init_ui()
@@ -12,6 +20,6 @@ class MainMenu(QMainWindow):
 
     def init_ui(self):
         self.statusBar()
-        self.setGeometry(500, 500, 500, 500)
+        self.setGeometry(self.pos_x, self.pos_y, self.width, self.height)
         self.show()
 
