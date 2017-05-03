@@ -1,0 +1,3 @@
+[submodule "cute.py"]
+	path = cute.py
+	url = https://github.com/kubocker/cute.py

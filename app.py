@@ -9,6 +9,7 @@ from base.menu import MainMenu
 def main():
     app = QApplication(sys.argv)
     menu = MainMenu()
+    # menu.title = "テスト"
     sys.exit(app.exec_())
 
 

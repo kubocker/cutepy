@@ -1,7 +1,7 @@
 
-UI_BASE = {
-        'x': 500,
-        'y': 500,
-        'width': 500,
-        'height': 500
-    }
+CANVAS = {
+    'x': 1000,
+    'y': 1000,
+    'width': 500,
+    'height': 500
+}
