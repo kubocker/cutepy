@@ -2,6 +2,6 @@
 CANVAS = {
     'x': 1000,
     'y': 1000,
-    'width': 500,
-    'height': 500
+    'width': 650,
+    'height': 1000
 }
