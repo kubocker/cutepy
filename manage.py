@@ -28,7 +28,7 @@ class Command(object):
         print("------ project dir --------")
         self.__create_files(name, files=project_files)
 
-        cmd = "mv base/{0} ../".format(project_files[-1])
+        cmd = "cp base/{0} ../{0}".format(project_files[-1])
         subprocess.call(cmd, shell=True)
 
         copy_files = ['__init_.py', 'settings.py']
