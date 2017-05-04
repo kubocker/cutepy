@@ -28,6 +28,9 @@ class Command(object):
         print("------ project dir --------")
         self.__create_files(name, files=project_files)
 
+        cmd = "mv ../{0}/{1} ../".format(name, project_files[-1])
+        subprocess.call(cmd, shell=True)
+
         copy_files = ['__init_.py', 'settings.py']
         for k in range(len(copy_files)):
             if copy_files[k] in project_files:
