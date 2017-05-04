@@ -4,10 +4,17 @@
 # Cute.py   SETTINGS #
 ######################
 
-# CANAVAS
 CANVAS = {
     'x': 1000,
     'y': 1000,
     'width': 650,
     'height': 1000
 }
+
+########################
+# Cute.py APPLICATIONS #
+########################
+
+INSTALLED_APPS = (
+
+)

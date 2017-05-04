@@ -3,12 +3,12 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication
-from base.menu import MainMenu
+from base.menu import BaseMainMenu
 
 
 def main():
     app = QApplication(sys.argv)
-    menu = MainMenu()
+    menu = BaseMainMenu()
     # menu.title = "テスト"
     sys.exit(app.exec_())
 
