@@ -17,6 +17,7 @@ if __name__ == '__main__':
 MENU_TEMPLATE = """
 from PyQt5.QtWidgets import *
 from cutepy.base.menu import BaseMainMenu, BaseWindow
+from {0} import settings
 
 
 class MainWindow(BaseWindow):
@@ -26,6 +27,13 @@ class MainWindow(BaseWindow):
 
     def init_ui(self):
         super().init_ui()
+        h_box = QHBoxLayout()
+        for k in range(len(settings.INSTALLED_APPS)):
+            print(settings.INSTALLED_APPS[k])
+            self.tab.addTab(QWidget(), settings.INSTALLED_APPS[k])
+        h_box.addWidget(self.tab)
+        self.setLayout(h_box)
+        self.show()
 
 
 class MainMenu(BaseMainMenu):

@@ -36,7 +36,7 @@ class Command(object):
 
         print("set menu.py...")
         f = open('../menu.py', 'w')
-        f.write(template.MENU_TEMPLATE)
+        f.write(template.MENU_TEMPLATE.format(name))
         f.close()
 
         copy_files = ['__init_.py', 'settings.py']
