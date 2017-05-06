@@ -25,3 +25,15 @@ class MainMenu(BaseMainMenu):
     def init_ui(self):
         super().init_ui()
 """
+
+APP_FORM_TEMPERATE = """
+# Create your forms here.
+"""
+
+APP_VIEW_TEMPLATE = """
+# Create your views here.
+"""
+
+APP_MODEL_TEMPLATE = """
+# Create your models here.
+"""

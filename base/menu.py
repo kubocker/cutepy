@@ -63,7 +63,8 @@ class BaseWindow(QWidget):
         self.show()
 
     def init_ui(self):
-        pass
+        self.h_layout = QHBoxLayout()
+        self.v_layout = QVBoxLayout()
 
 
 class BaseWidget(QWidget):

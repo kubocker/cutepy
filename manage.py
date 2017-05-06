@@ -52,7 +52,27 @@ class Command(object):
         """
         print("------ app dir --------")
         self.__create_files(name, files=app_files)
+
+        print("set forms.py...")
+        f = open('../{0}/{1}'.format(name, app_files[1]), 'w')
+        f.write(template.APP_FORM_TEMPERATE)
+        f.close()
+
+        print("set views.py...")
+        f = open('../{0}/{1}'.format(name, app_files[2]), 'w')
+        f.write(template.APP_VIEW_TEMPLATE)
+        f.close()
+
+        print("set model.py...")
+        f = open('../{0}/{1}'.format(name, app_files[3]), 'w')
+        f.write(template.APP_MODEL_TEMPLATE)
+        f.close()
+
         print("end!!")
+
+    def setup(self, name):
+        """ アプリのセットアップ """
+        pass
 
 
 if __name__ == '__main__':
