@@ -15,7 +15,17 @@ if __name__ == '__main__':
 """
 
 MENU_TEMPLATE = """
-from cutepy.base.menu import BaseMainMenu
+from cutepy.base.menu import BaseMainMenu, BaseWindow
+
+
+class MainWindow(BaseWindow):
+
+    def __init__(self, parent=None):
+        super(MainWindow, self).__init__(parent)
+
+    def init_ui(self):
+        super().init_ui()
+
 
 class MainMenu(BaseMainMenu):
 
