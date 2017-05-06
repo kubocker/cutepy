@@ -12,8 +12,8 @@ class BaseMainMenu(QMainWindow):
     pos_x = ui['x']
     pos_y = ui['y']
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent):
+        super(BaseMainMenu, self).__init__(parent)
         self.init_ui()
 
     def init_ui(self):

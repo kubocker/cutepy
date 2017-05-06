@@ -15,6 +15,7 @@ if __name__ == '__main__':
 """
 
 MENU_TEMPLATE = """
+from PyQt5.QtWidgets import *
 from cutepy.base.menu import BaseMainMenu, BaseWindow
 
 
@@ -29,8 +30,8 @@ class MainWindow(BaseWindow):
 
 class MainMenu(BaseMainMenu):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent=None):
+        super(MainMenu, self).__init__(parent)
 
     def init_ui(self):
         super().init_ui()
