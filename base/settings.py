@@ -1,4 +1,6 @@
-# import os
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ######################
 # Cute.py   SETTINGS #
@@ -18,3 +20,18 @@ CANVAS = {
 INSTALLED_APPS = (
 
 )
+
+#######################
+# Cute.py STATICS     #
+#######################
+
+STATIC_URL = '/static/'
+
+TEMPLATES = []
+
+DATABASES = {
+    'default': {
+        'ENGINE': '',
+        'NAME': os.path.join(BASE_URL, 'db.sqlite3'),
+    }
+}
