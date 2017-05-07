@@ -112,6 +112,8 @@ class BaseDialog(QDialog):
         self.add_btn = QPushButton('Add', self)
         self.cancel_btn = QPushButton('Cancel', self)
 
+        self.init_ui()
+
     def __center(self):
         qr = self.frameGeometry()
         cp = QDesktopWidget().availableGeometry().center()
