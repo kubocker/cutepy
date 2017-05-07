@@ -37,6 +37,7 @@ class MainWindow(BaseWindow):
 
 
 class MainMenu(BaseMainMenu):
+    __slots__ = ['_title', '_message']
 
     def __init__(self, parent=None):
         super(MainMenu, self).__init__(parent)
