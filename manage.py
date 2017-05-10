@@ -1,6 +1,6 @@
 import subprocess
 import fire
-from base import template
+from utility import templates
 
 project_files = ['__init__.py', 'settings.py', 'app.py']
 app_files = ['__init__.py', 'forms.py', 'views.py', 'models.py', 'app.py']
@@ -31,12 +31,12 @@ class Command(object):
 
         print("set app.py...")
         f = open('../app.py', 'w')
-        f.write(template.APP_TEMPLATE)
+        f.write(templates.APP_TEMPLATE)
         f.close()
 
         print("set menu.py...")
         f = open('../menu.py', 'w')
-        f.write(template.MENU_TEMPLATE.format(name))
+        f.write(templates.MENU_TEMPLATE.format(name))
         f.close()
 
         copy_files = ['__init_.py', 'settings.py']
@@ -55,17 +55,17 @@ class Command(object):
 
         print("set forms.py...")
         f = open('../{0}/{1}'.format(name, app_files[1]), 'w')
-        f.write(template.APP_FORM_TEMPERATE)
+        f.write(templates.APP_FORM_TEMPERATE)
         f.close()
 
         print("set views.py...")
         f = open('../{0}/{1}'.format(name, app_files[2]), 'w')
-        f.write(template.APP_VIEW_TEMPLATE)
+        f.write(templates.APP_VIEW_TEMPLATE)
         f.close()
 
         print("set model.py...")
         f = open('../{0}/{1}'.format(name, app_files[3]), 'w')
-        f.write(template.APP_MODEL_TEMPLATE)
+        f.write(templates.APP_MODEL_TEMPLATE)
         f.close()
 
         print("end!!")
