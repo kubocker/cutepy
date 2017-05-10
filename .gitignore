@@ -1,4 +1,6 @@
 __pycache__/*
 base/__pycache__/*
+*.swp
+*.swo
 
 
