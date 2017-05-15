@@ -13,12 +13,12 @@ class Command(object):
         return "Hello, " + username + " !!"
 
     def __create_files(self, name, files=[]):
-        cmd = "cd ../ && mkdir {0}".format(name)
+        cmd = "mkdir $(pwd)/{0}".format(name)
         subprocess.call(cmd, shell=True)
 
         print("creating...")
         for k in range(len(files)):
-            cmd = "cd ../{0} && touch {1}".format(name, files[k])
+            cmd = "touch $(pwd)/{0}/{1}".format(name, files[k])
             print(name + "/" + files[k])
             subprocess.call(cmd, shell=True)
 
