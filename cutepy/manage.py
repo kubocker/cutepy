@@ -42,7 +42,7 @@ class Command(object):
         copy_files = ['__init_.py', 'settings.py']
         for k in range(len(copy_files)):
             if copy_files[k] in project_files:
-                cmd = "cp base/{0} ../{1}/{2}".format(copy_files[k], name, project_files[k])
+                cmd = "cp project_template/{0} ../{1}/{2}".format(copy_files[k], name, project_files[k])
                 subprocess.call(cmd, shell=True)
         print("end!!")
 
@@ -53,17 +53,17 @@ class Command(object):
         print("------ app dir --------")
         self.__create_files(name, files=app_files)
 
-        print("set forms.py...")
+        print("set {file}...".format(file=app_files[1]))
         f = open('../{0}/{1}'.format(name, app_files[1]), 'w')
         f.write(templates.APP_FORM_TEMPERATE)
         f.close()
 
-        print("set views.py...")
+        print("set {file}...".format(file=app_files[2]))
         f = open('../{0}/{1}'.format(name, app_files[2]), 'w')
         f.write(templates.APP_VIEW_TEMPLATE)
         f.close()
 
-        print("set model.py...")
+        print("set {file}...".format(file=app_files[3]))
         f = open('../{0}/{1}'.format(name, app_files[3]), 'w')
         f.write(templates.APP_MODEL_TEMPLATE)
         f.close()
