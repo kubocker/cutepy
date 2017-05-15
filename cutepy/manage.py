@@ -1,6 +1,6 @@
 import subprocess
 import fire
-from utility import templates
+from cutepy.utility import templates
 
 project_files = ['__init__.py', 'settings.py', 'app.py']
 app_files = ['__init__.py', 'forms.py', 'views.py', 'models.py', 'app.py']
