@@ -1,6 +1,9 @@
 import subprocess
 import fire
+import cutepy.project_template as pt
+from cutepy.project_template import settings
 from cutepy.utility import templates
+
 
 project_files = ['__init__.py', 'settings.py', 'app.py']
 app_files = ['__init__.py', 'forms.py', 'views.py', 'models.py', 'app.py']
@@ -30,20 +33,20 @@ class Command(object):
         self.__create_files(name, files=project_files)
 
         print("set app.py...")
-        f = open('../app.py', 'w')
+        f = open('app.py', 'w')
         f.write(templates.APP_TEMPLATE)
         f.close()
 
         print("set menu.py...")
-        f = open('../menu.py', 'w')
+        f = open('menu.py', 'w')
         f.write(templates.MENU_TEMPLATE.format(name))
         f.close()
 
-        copy_files = ['__init_.py', 'settings.py']
+        copy_files = [pt.__file__, settings.__file__]
+        print("coping....")
         for k in range(len(copy_files)):
-            if copy_files[k] in project_files:
-                cmd = "cp project_template/{0} $(pwd)/{1}/{2}".format(copy_files[k], name, project_files[k])
-                subprocess.call(cmd, shell=True)
+            cmd = "cp {0} $(pwd)/{1}/{2}".format(copy_files[k], name, project_files[k])
+            subprocess.call(cmd, shell=True)
         print("end!!")
 
     def startapp(self, name):
