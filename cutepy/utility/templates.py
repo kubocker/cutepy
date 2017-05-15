@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
 MENU_TEMPLATE = """
 from PyQt5.QtWidgets import *
-from cutepy.base.menu import BaseMainMenu, BaseWindow
+from cutepy.utility.menu import BaseMainMenu, BaseWindow
 from {0} import settings
 
 
