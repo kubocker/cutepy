@@ -75,5 +75,9 @@ class Command(object):
         pass
 
 
-if __name__ == '__main__':
+def create():
     fire.Fire(Command)
+
+
+if __name__ == '__main__':
+    create()
