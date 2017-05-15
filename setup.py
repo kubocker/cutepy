@@ -1,8 +1,8 @@
-
 from setuptools import setup, find_packages
+from cutepy import __version__ as version
 
 setup(name='cutepy',
-      version='0.1.1',
+      version=version,
       description='common ui and commands for pyqt5',
       author='kubocker',
       author_email='kubocker@gmail.com',
