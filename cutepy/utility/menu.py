@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import (QMainWindow,
                              QTabWidget,
                              QHBoxLayout,
                              QVBoxLayout)
-from .settings import CANVAS as ui
+from cutepy.project_template.settings import CANVAS as ui
 
 
 class BaseMainMenu(QMainWindow):
