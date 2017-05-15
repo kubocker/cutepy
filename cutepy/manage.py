@@ -57,17 +57,17 @@ class Command(object):
         self.__create_files(name, files=app_files)
 
         print("set {file}...".format(file=app_files[1]))
-        f = open('../{0}/{1}'.format(name, app_files[1]), 'w')
+        f = open('{0}/{1}'.format(name, app_files[1]), 'w')
         f.write(templates.APP_FORM_TEMPERATE)
         f.close()
 
         print("set {file}...".format(file=app_files[2]))
-        f = open('../{0}/{1}'.format(name, app_files[2]), 'w')
+        f = open('{0}/{1}'.format(name, app_files[2]), 'w')
         f.write(templates.APP_VIEW_TEMPLATE)
         f.close()
 
         print("set {file}...".format(file=app_files[3]))
-        f = open('../{0}/{1}'.format(name, app_files[3]), 'w')
+        f = open('{0}/{1}'.format(name, app_files[3]), 'w')
         f.write(templates.APP_MODEL_TEMPLATE)
         f.close()
 
