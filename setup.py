@@ -1,5 +1,5 @@
-from cutepy import __version__ as version
 from setuptools import setup, find_packages
+from cutepy import __version__ as version
 
 
 setup(name='cutepy',
