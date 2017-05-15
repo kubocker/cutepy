@@ -42,7 +42,7 @@ class Command(object):
         copy_files = ['__init_.py', 'settings.py']
         for k in range(len(copy_files)):
             if copy_files[k] in project_files:
-                cmd = "cp project_template/{0} ../{1}/{2}".format(copy_files[k], name, project_files[k])
+                cmd = "cp project_template/{0} $(pwd)/{1}/{2}".format(copy_files[k], name, project_files[k])
                 subprocess.call(cmd, shell=True)
         print("end!!")
 
